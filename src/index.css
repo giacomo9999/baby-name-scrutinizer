@@ -13,6 +13,60 @@ code {
     monospace;
 }
 
-h1 {
-  color: white;
+#main {
+  margin-top: 6em;
 }
+
+#content {
+  margin-top: 3em;
+}
+
+.ui.card,
+.ui.cards>.card {
+  background-color: rgb(248, 227, 241);
+  /* color: white; */
+}
+
+
+h1 {
+  /* headline */
+ letter-spacing: 0.05em;
+ font-weight: 200;
+ font-size: 2.2em;
+ font-style: italic;
+  color:rgb(136, 47, 106);
+  text-align: center;
+}
+
+
+h4.white {color:white}
+
+
+h4 {
+  /* headline */
+ letter-spacing: 0.05em;
+ font-weight: 200;
+ font-size: 1.25em;
+ font-style: italic;
+  color:rgb(136, 47, 106);
+  text-align: center;
+}
+
+
+
+.list {
+ line-height: .05em;
+ font-weight: 400;
+ /* font-family: 'Josefin Sans', cursive; */
+ color:rgb(54, 5, 38);
+ text-align: center;   
+}
+
+.master {
+ background-color: rgb(250, 206, 236);
+}
+
+body {
+ background-color: rgb(250, 206, 236);
+}
+
