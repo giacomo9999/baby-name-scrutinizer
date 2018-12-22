@@ -31,7 +31,8 @@ code {
 h1 {
   /* headline */
  letter-spacing: 0.05em;
- font-weight: 200;
+ font-weight: 900;
+ line-height: .25;
  font-size: 2.2em;
  font-style: italic;
   color:rgb(136, 47, 106);
@@ -43,8 +44,9 @@ h4.white {color:white}
 
 
 h4 {
-  /* headline */
+  /* subhead */
  letter-spacing: 0.05em;
+ line-height: 2.5;
  font-weight: 200;
  font-size: 1.25em;
  font-style: italic;

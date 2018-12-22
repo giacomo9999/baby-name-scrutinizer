@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 class ListForm extends React.Component {
     state = {
@@ -18,7 +18,7 @@ class ListForm extends React.Component {
     }
   
     handleSubmit = () => {
-      console.log("ListForm handling Submit.");
+      console.log("ListForm handling Submit - list ID: "+this.props.list_id);
       this.props.onFormSubmit({
         list_id: this.props.list_id,
         year: this.state.year,
@@ -93,3 +93,5 @@ class ListForm extends React.Component {
       );
     }
   }
+
+  export default ListForm;

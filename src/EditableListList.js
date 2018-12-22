@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
+import EditableList from "./EditableList";
 
 class EditableListList extends React.Component {
     render() {

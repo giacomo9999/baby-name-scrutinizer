@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
+import ListForm from "./ListForm";
 
 class ToggleableListForm extends React.Component {
   state = {

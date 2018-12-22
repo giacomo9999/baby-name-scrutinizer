@@ -1,4 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
+import ListForm from "./ListForm";
+import List from "./List";
 
 class EditableList extends React.Component {
     state = {
