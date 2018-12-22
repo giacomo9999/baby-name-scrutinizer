@@ -81,7 +81,7 @@ class ListDashboard extends React.Component {
     return (
       <div className="ui three column centered grid">
         <div className="column">
-        <div></div>
+          <div />
           <h1>The NYC Baby Name Scrutinizer</h1>
           <EditableListList
             lists={this.state.lists}
