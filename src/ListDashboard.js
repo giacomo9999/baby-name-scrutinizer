@@ -47,7 +47,7 @@ class ListDashboard extends React.Component {
     function newList(attrs = {}, listLength) {
       const list = {
         list_id: attrs.list_id || listLength + 1,
-        year: attrs.year || "Project",
+        year: attrs.year || "Year",
         sex: attrs.sex || "Sex",
         race: attrs.race || "Ethnicity"
       };
