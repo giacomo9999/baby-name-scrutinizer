@@ -11,6 +11,7 @@ class EditableListList extends React.Component {
           year={list.year}
           sex={list.sex}
           race={list.race}
+          topFiveNames={list.topFiveNames}
           onFormSubmit={this.props.onFormSubmit}
           onTrashClick={this.props.onTrashClick}
         />

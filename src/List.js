@@ -7,19 +7,20 @@ class List extends React.Component {
     };
   
     render() {
+      console.log(this.props.topFiveNames[0]);
       return (
         <div className="ui centered card">
           <div className="content">
             <div className="center aligned">
               <h4>{" - List " + this.props.list_id + " Parameters -"}</h4>
               <div className="ui pink label">
-                <h4 className="white">{this.props.year}</h4>
+                <h5 className="white">{this.props.year}</h5>
               </div>
               <div className="ui pink label">
-                <h4 className="white">{this.props.sex}</h4>
+                <h5 className="white">{this.props.sex}</h5>
               </div>
               <div className="ui pink label">
-                <h4 className="white">{this.props.race}</h4>
+                <h5 className="white">{this.props.race}</h5>
               </div>
             </div>
           </div>

@@ -52,6 +52,7 @@ class EditableList extends React.Component {
             year={this.props.year}
             sex={this.props.sex}
             race={this.props.race}
+            topFiveNames={this.props.topFiveNames}
             onEditClick={this.handleEditClick}
             onTrashClick={this.props.onTrashClick}
           />

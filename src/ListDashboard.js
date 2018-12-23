@@ -7,16 +7,18 @@ class ListDashboard extends React.Component {
   state = {
     lists: [
       {
-        list_id: "1",
+        list_id: "(sample)",
         year: "2011",
         sex: "Female",
-        race: "Asian/Pacific"
+        race: "Asian/Pacific",
+        topFiveNames: ['Bob','Bob','Bob','Bob','Bob']
       },
       {
         list_id: "2",
         year: "2015",
         sex: "Male",
-        race: "Hispanic"
+        race: "Hispanic",
+        topFiveNames: ['Bob','Bob','Bob','Bob','Bob']
       }
     ]
   };
@@ -43,13 +45,19 @@ class ListDashboard extends React.Component {
     });
   };
 
+  getResults(list) {
+    return ['Bob','Bob','Bob','Bob','Bob'];
+  }
+
   createList = list => {
+    const nameArr = this.getResults(list);
     function newList(attrs = {}, listLength) {
       const list = {
         list_id: attrs.list_id || listLength + 1,
         year: attrs.year || "Year",
         sex: attrs.sex || "Sex",
-        race: attrs.race || "Ethnicity"
+        race: attrs.race || "Ethnicity",
+        topFiveNames: nameArr || []
       };
       return list;
     }

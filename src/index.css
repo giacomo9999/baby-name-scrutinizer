@@ -54,6 +54,17 @@ h4 {
   text-align: center;
 }
 
+h5 {
+  /* subhead */
+ letter-spacing: 0.05em;
+ line-height: 2.5;
+ font-weight: 700;
+ font-size: 1.25em;
+ font-style: italic;
+  color:white;
+  text-align: center;
+}
+
 
 
 .list {

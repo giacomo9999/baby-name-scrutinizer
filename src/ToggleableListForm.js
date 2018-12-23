@@ -31,10 +31,11 @@ class ToggleableListForm extends React.Component {
       return (
         <div className="ui basic content center aligned segment">
           <button
-            className="ui basic button icon"
+            className="ui purple button icon"
             onClick={this.handleFormOpen}
           >
-            <i className="plus icon" />
+            Create New List
+            {/* <i className="plus icon" /> */}
           </button>
         </div>
       );
