@@ -53,7 +53,7 @@ class ListDashboard extends React.Component {
       };
       return list;
     }
-    console.log("ListDashboard now creating list.");
+    console.log("ListDashboard now creating list...");
     const l = newList(list, this.state.lists.length);
     this.setState({
       lists: this.state.lists.concat(l)

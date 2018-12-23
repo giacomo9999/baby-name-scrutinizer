@@ -13,7 +13,7 @@ class App extends Component {
       )
       // extract relevant data from response object
       .then(response => {
-        console.log("Assembling database...");
+        console.log("Data retrieved from cityofnewyork.us. Building database...");
         const recordObj = response.data.data.map((entry, index) => ({
           key: "entry_" + index,
           birthYear: entry[8],
