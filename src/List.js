@@ -37,7 +37,7 @@ class List extends React.Component {
 
             <div className="ui selection list">
               <i className="item">
-                <div className="ui red horizontal circular label">Fruit</div>
+                <div className="ui big red horizontal circular label">Fruit</div>
                 Kumquats
               </i>
               <a className="item">
@@ -45,8 +45,11 @@ class List extends React.Component {
                 Ice Cream
               </a>
             </div>
+
           </div>
         </div>
+
+
         <div className="extra content">
           <span
             className="right floated edit icon"
