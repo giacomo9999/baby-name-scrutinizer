@@ -2,6 +2,7 @@ import React from "react";
 import ListForm from "./ListForm";
 import List from "./List";
 
+// EditableList -- if editFormOpen is true, display ListForm; if not, display List. 
 class EditableList extends React.Component {
     state = {
       editFormOpen: false

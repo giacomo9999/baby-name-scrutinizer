@@ -11,14 +11,14 @@ class ListDashboard extends React.Component {
         year: "2011",
         sex: "Female",
         race: "Asian/Pacific",
-        topFiveNames: ['Bob','Bob','Bob','Bob','Bob']
+        topFiveNames: ['Mary','Jane','Sue','Griselda','Emily']
       },
       {
-        list_id: "2",
+        list_id: "1",
         year: "2015",
         sex: "Male",
         race: "Hispanic",
-        topFiveNames: ['Bob','Bob','Bob','Bob','Bob']
+        topFiveNames: ['John','Paul','George','Ringo','Bob']
       }
     ]
   };
