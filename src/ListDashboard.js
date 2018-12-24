@@ -45,9 +45,9 @@ class ListDashboard extends React.Component {
     } else {
       // use .filter to return only records from DB that match year/sex/race arguments
       const adjRaceObj = {
-        Black: "BLACK NON HISP",
+        Black: "BLACK NON HISPANIC",
         "Asian/Pacific": "ASIAN AND PACIFIC ISLANDER",
-        White: "WHITE NON HISP",
+        White: "WHITE NON HISPANIC",
         Hispanic: "HISPANIC"
       };
 

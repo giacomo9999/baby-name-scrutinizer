@@ -57,7 +57,7 @@ class App extends Component {
         for (let i = 0; i <= raceArr.length - 1; i++) {
           for (let j = 0; j <= yearsArr.length - 1; j++) {
             for (let k = 0; k <= sexArr.length - 1; k++) {
-              const filteredNamesData = recordObj.filter(
+              const filteredNamesData = this.state.namesData.filter(
                 entry =>
                   raceArr[i] === entry.race &&
                   yearsArr[j] === entry.birthYear.toUpperCase() &&
@@ -65,6 +65,7 @@ class App extends Component {
               );
 
               console.log(filteredNamesData[0]);
+              console.log("---");
 
               if (filteredNamesData.length === 0) {
                 console.log(
