@@ -58,6 +58,8 @@ class ListDashboard extends React.Component {
         Hispanic: "HISPANIC"
       };
 
+      console.log(entry.year, entry.sex.toUpperCase(), adjRaceObj[entry.race]);
+
       const filteredNamesData = this.props.namesData.filter(
         record =>
           record.birthYear === entry.year &&
