@@ -27,6 +27,9 @@ class App extends Component {
           if (entry.race === "WHITE NON HISP") {
             entry.race = "WHITE NON HISPANIC";
           }
+          if (entry.race === "ASIAN AND PACI") {
+            entry.race = "ASIAN AND PACIFIC ISLANDER";
+          }
         });
         // create a new state object without mutating the original one
         const newData = Object.assign({}, this.state, { namesData: recordObj });
@@ -34,6 +37,8 @@ class App extends Component {
         // store the new object in the component's state
         this.setState(newData);
         console.log("Database assembled.");
+
+        console.log(this.state.namesData[55]);
       })
       .catch(error => console.log(error));
   }

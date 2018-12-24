@@ -56,8 +56,8 @@ class ListDashboard extends React.Component {
       const filteredNamesData = this.props.namesData.filter(
         record =>
           record.birthYear === entry.year &&
-          record.sex === entry.sex.toUpperCase() &&
-          record.race === adjRaceObj[entry.race]
+          record.sex.toUpperCase() === entry.sex.toUpperCase() &&
+          record.race.toUpperCase() === adjRaceObj[entry.race]
       );
 
       if (filteredNamesData.length === 0) {
