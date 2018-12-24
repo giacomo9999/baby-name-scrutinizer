@@ -11,14 +11,14 @@ class ListDashboard extends React.Component {
         year: "2011",
         sex: "Female",
         race: "Asian/Pacific",
-        topFiveNames: ['Mary','Jane','Sue','Griselda','Emily']
+        topFiveNames: ["Mary", "Jane", "Sue", "Griselda", "Emily"]
       },
       {
         list_id: "1",
         year: "2015",
         sex: "Male",
         race: "Hispanic",
-        topFiveNames: ['John','Paul','George','Ringo','Bob']
+        topFiveNames: ["John", "Paul", "George", "Ringo", "Bob"]
       }
     ]
   };
@@ -45,9 +45,38 @@ class ListDashboard extends React.Component {
     });
   };
 
-  getResults(list) {
-    return ['Bob','Bob','Bob','Bob','Bob'];
-  }
+  getResults = entry => {
+    if (this.props.namesData.length === 0) {
+      console.log("data is not in yet.");
+      return [];
+    } else {
+      // use .filter to return only records from DB that match year/sex/race arguments
+      const adjRaceObj = {
+        Black: "BLACK NON HISP",
+        "Asian/Pacific": "ASIAN AND PACIFIC ISLANDER",
+        White: "WHITE NON HISP",
+        Hispanic: "HISPANIC"
+      };
+
+      const filteredNamesData = this.props.namesData.filter(
+        record =>
+          record.birthYear === entry.year &&
+          record.sex === entry.sex.toUpperCase() &&
+          record.race === adjRaceObj[entry.race]
+      );
+
+      if (filteredNamesData.length === 0) {
+        console.log("cannot match request parameters to DB.");
+        return ["one or more arguments not in DB"];
+      }
+      const topFive = [];
+      for (let i = 0; i <= 4; i++) {
+        topFive.push(filteredNamesData[i].name.toUpperCase());
+      }
+      console.log(topFive);
+      return topFive;
+    }
+  };
 
   createList = list => {
     const nameArr = this.getResults(list);
