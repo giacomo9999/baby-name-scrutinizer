@@ -22,64 +22,59 @@ code {
 }
 
 .ui.card,
-.ui.cards>.card {
+.ui.cards > .card {
   background-color: rgb(248, 227, 241);
   /* color: white; */
 }
 
-
 h1 {
   /* headline */
- letter-spacing: 0.05em;
- font-weight: 900;
- line-height: .25;
- font-size: 2.2em;
- font-style: italic;
-  color:rgb(136, 47, 106);
+  letter-spacing: 0.05em;
+  font-weight: 900;
+  line-height: 0.25;
+  font-size: 2.2em;
+  font-style: italic;
+  color: rgb(136, 47, 106);
   text-align: center;
 }
 
-
-h4.white {color:white}
-
+h4.white {
+  color: white;
+}
 
 h4 {
   /* subhead */
- letter-spacing: 0.05em;
- line-height: 2.5;
- font-weight: 200;
- font-size: 1.25em;
- font-style: italic;
-  color:rgb(136, 47, 106);
+  letter-spacing: 0.05em;
+  line-height: 2.5;
+  font-weight: 200;
+  font-size: 1.25em;
+  font-style: italic;
+  color: rgb(136, 47, 106);
   text-align: center;
 }
 
 h5 {
   /* subhead */
- letter-spacing: 0.05em;
- line-height: 2.5;
- font-weight: 700;
- font-size: 1.25em;
- font-style: italic;
-  color:white;
+  letter-spacing: 0.05em;
+  line-height: 2.5;
+  font-weight: 700;
+  font-size: 1.25em;
+  font-style: italic;
+  color: white;
   text-align: center;
 }
 
-
-
-.list {
- line-height: .05em;
- font-weight: 400;
- /* font-family: 'Josefin Sans', cursive; */
- color:rgb(54, 5, 38);
- text-align: center;   
+td {
+  background-color: white;
+  color:  rgb(136, 47, 106);
+  font-weight: 700;
+  font-style: italic;
 }
 
 .master {
- background-color: rgb(250, 206, 236);
+  background-color: rgb(250, 206, 236);
 }
 
 body {
- background-color: rgb(250, 206, 236);
+  background-color: rgb(250, 206, 236);
 }
-

@@ -8,14 +8,12 @@ class List extends React.Component {
 
   render() {
     console.log(this.props.topFiveNames[0]);
-    const itemStyle = {
-      listStyleType: "none"
-    };
+
     const nameList = this.props.topFiveNames.map((name, index) => (
-      <li style={itemStyle}>
-        <div className="ui big violet label">{index + 1 + ".  " + name}</div>
-        <br />
-      </li>
+      <tr>
+        <td>{index + 1}</td>
+        <td>{name}</td>
+      </tr>
     ));
     return (
       <div className="ui centered card">
@@ -31,24 +29,11 @@ class List extends React.Component {
             <div className="ui pink label">
               <h5 className="white">{this.props.race}</h5>
             </div>
-            <div className="left aligned">
-              <ul>{nameList}</ul>
-            </div>
-
-            <div className="ui selection list">
-              <i className="item">
-                <div className="ui big red horizontal circular label">Fruit</div>
-                Kumquats
-              </i>
-              <a className="item">
-                <div className="ui purple horizontal label">Candy</div>
-                Ice Cream
-              </a>
-            </div>
-
+            <table className="ui celled definition striped table">
+              <tbody className="two wide column">{nameList}</tbody>
+            </table>
           </div>
         </div>
-
 
         <div className="extra content">
           <span
