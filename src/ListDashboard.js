@@ -94,7 +94,7 @@ class ListDashboard extends React.Component {
 
   updateList = attrs => {
     console.log("ListDashboard now updating state with list.");
-    console.log(attrs);
+    console.log(`New attrs: ${attrs.list_id}`);
     this.setState({
       lists: this.state.lists.map(list => {
         if (list.list_id === attrs.list_id) {

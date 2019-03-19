@@ -16,5 +16,5 @@ Tutorial on deploying a "create-react-app" app to Netlify: https://www.slightedg
 
 --
 
-The app is styled (more or less) using a CSS library called Semantic UI:
+The app is styled (more or less) using Semantic UI:
 https://semantic-ui.com/

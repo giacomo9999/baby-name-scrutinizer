@@ -45,41 +45,41 @@ class App extends Component {
         console.log("Database assembled.");
 
         // check validity of imported data
-        const raceArr = [
-          "BLACK NON HISPANIC",
-          "ASIAN AND PACIFIC ISLANDER",
-          "WHITE NON HISPANIC",
-          "HISPANIC"
-        ];
-        const yearsArr = ["2011", "2012", "2013", "2014", "2015", "2016"];
-        const sexArr = ["MALE", "FEMALE"];
+        // const raceArr = [
+        //   "BLACK NON HISPANIC",
+        //   "ASIAN AND PACIFIC ISLANDER",
+        //   "WHITE NON HISPANIC",
+        //   "HISPANIC"
+        // ];
+        // const yearsArr = ["2011", "2012", "2013", "2014", "2015", "2016"];
+        // const sexArr = ["MALE", "FEMALE"];
 
-        for (let i = 0; i <= raceArr.length - 1; i++) {
-          for (let j = 0; j <= yearsArr.length - 1; j++) {
-            for (let k = 0; k <= sexArr.length - 1; k++) {
-              const filteredNamesData = this.state.namesData.filter(
-                entry =>
-                  raceArr[i] === entry.race &&
-                  yearsArr[j] === entry.birthYear.toUpperCase() &&
-                  sexArr[k] === entry.sex.toUpperCase()
-              );
+        // for (let i = 0; i <= raceArr.length - 1; i++) {
+        //   for (let j = 0; j <= yearsArr.length - 1; j++) {
+        //     for (let k = 0; k <= sexArr.length - 1; k++) {
+        //       const filteredNamesData = this.state.namesData.filter(
+        //         entry =>
+        //           raceArr[i] === entry.race &&
+        //           yearsArr[j] === entry.birthYear.toUpperCase() &&
+        //           sexArr[k] === entry.sex.toUpperCase()
+        //       );
 
-              console.log(filteredNamesData[0]);
-              console.log("---");
+        //       console.log(filteredNamesData[0]);
+        //       console.log("---");
 
-              if (filteredNamesData.length === 0) {
-                console.log(
-                  raceArr[i],
-                  yearsArr[j],
-                  sexArr[k],
-                  " ** BAD DATA **"
-                );
-              } else {
-                console.log(raceArr[i], yearsArr[j], sexArr[k]);
-              }
-            }
-          }
-        }
+        //       if (filteredNamesData.length === 0) {
+        //         console.log(
+        //           raceArr[i],
+        //           yearsArr[j],
+        //           sexArr[k],
+        //           " ** BAD DATA **"
+        //         );
+        //       } else {
+        //         console.log(raceArr[i], yearsArr[j], sexArr[k]);
+        //       }
+        //     }
+        //   }
+        // }
       })
       .catch(error => console.log(error));
   }
