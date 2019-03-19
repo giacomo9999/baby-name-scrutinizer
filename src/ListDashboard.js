@@ -68,7 +68,7 @@ class ListDashboard extends React.Component {
       for (let i = 0; i <= 4; i++) {
         topFive.push(filteredNamesData[i].name.toUpperCase());
       }
-      console.log(topFive);
+      console.log(`Top Five Names: ${topFive}`);
       return topFive;
     }
   };
