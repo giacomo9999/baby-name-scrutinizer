@@ -1,6 +1,8 @@
 import React from "react";
 import EditableList from "./EditableList";
 
+
+// child of ListDashboard
 class EditableListList extends React.Component {
     render() {
       // console.log('EditableListList updating the lists.')

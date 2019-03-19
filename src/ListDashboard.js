@@ -25,6 +25,7 @@ class ListDashboard extends React.Component {
     console.log("ListDashboard now handling EditFormSubmit.");
     console.log(attrs);
     this.updateList(attrs);
+    console.log(`List ${attrs.list_id} updated.`);
   };
 
   handleTrashClick = listId => {
@@ -51,7 +52,12 @@ class ListDashboard extends React.Component {
         Hispanic: "HISPANIC"
       };
 
-      console.log(entry.year, entry.sex.toUpperCase(), adjRaceObj[entry.race]);
+      console.log(
+        "getResults says: ",
+        entry.year,
+        entry.sex.toUpperCase(),
+        adjRaceObj[entry.race]
+      );
 
       const filteredNamesData = this.props.namesData.filter(
         record =>
@@ -94,15 +100,20 @@ class ListDashboard extends React.Component {
 
   updateList = attrs => {
     console.log("ListDashboard now updating state with list.");
-    console.log(`New attrs: ${attrs.list_id}`);
+    console.log(
+      `New attrs: ${attrs.list_id}, ${attrs.year}, ${attrs.sex}, ${attrs.race}`
+    );
+    attrs.topFiveNames = this.getResults(attrs);
     this.setState({
       lists: this.state.lists.map(list => {
+        console.log("Setting state with revised list...");
         if (list.list_id === attrs.list_id) {
           return Object.assign({}, list, {
             list_id: attrs.list_id,
             year: attrs.year,
             sex: attrs.sex,
-            race: attrs.race
+            race: attrs.race,
+            topFiveNames: attrs.topFiveNames
           });
         } else {
           return list;
