@@ -39,7 +39,7 @@ class ListForm extends React.Component {
                 value={this.state.year}
                 onChange={this.handleChange}
               >
-                {/* <option value="">Year</option> */}
+                <option value="">Year</option>
                 <option value="2011">2011</option>
                 <option value="2012">2012</option>
                 <option value="2013">2013</option>
@@ -54,7 +54,7 @@ class ListForm extends React.Component {
                 value={this.state.sex}
                 onChange={this.handleChange}
               >
-                {/* <option value="">Sex</option> */}
+                <option value="">Sex</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
               </select>
@@ -65,7 +65,7 @@ class ListForm extends React.Component {
                 value={this.state.race}
                 onChange={this.handleChange}
               >
-                {/* <option value="">Ethnicity</option> */}
+                <option value="">Ethnicity</option>
                 <option value="Black">Black</option>
                 <option value="White">White</option>
                 <option value="Hispanic">Hispanic</option>
