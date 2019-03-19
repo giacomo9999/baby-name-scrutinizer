@@ -7,10 +7,12 @@ class List extends React.Component {
   };
 
   render() {
-    console.log(this.props.topFiveNames[0]);
+    console.log(
+      `List displaying top five names for list: ${this.props.topFiveNames}`
+    );
 
     const nameList = this.props.topFiveNames.map((name, index) => (
-      <tr>
+      <tr key={index}>
         <td>{index + 1}</td>
         <td>{name}</td>
       </tr>
