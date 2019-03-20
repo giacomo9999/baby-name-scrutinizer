@@ -31,7 +31,7 @@ class ListForm extends React.Component {
         race: this.state.race
       });
     } else {
-      alert("Year, Sex and Race must all have a value.");
+      alert("Year, Sex and Ethnicity must *all* be assigned values.");
     }
   };
 
