@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(242, 130, 200);
+}
+
+.dashboard_container {
+  width: 475px;
+  margin: 20px auto;
+}
+
+.editable_list_lists {
+  background-color: rgb(242, 130, 200);
+}
+
+.global_wrapper_bordered {
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 20px;
+  padding: 5px;
+  border-color: white;
+  background-color: rgb(247, 177, 220);
+  padding: 20px;
+  margin: 10px;
+}
+
+.global_wrapper_bordered_header {
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 20px;
+  padding: 5px;
+  border-color: white;
+  background-color: rgb(247, 177, 220);
+  padding: 10px;
+  margin: 10px;
+}
+
+.global_wrapper_bordered > h4,
+.list_header > h4 {
+  margin: 0;
+  line-height: 2em;
+}
+
+.global_wrapper_flex {
+  display: flex;
+  justify-content: center;
+}
+
+.global_wrapper_grid {
+  display: grid;
+  grid-template-columns: 335px 1fr 1fr;
+  
+}
+
+.label_param_box {
+  font-size: 1em;
+  display: inline-block;
+  border-radius: 10px;
+  margin: 0 5px;
+  width: 120px;
+  height: 30px;
+  background-color: rgb(192, 71, 146);
+}
+
+/* Tables and Table Items */
+
+table {
+  width: 40%;
+  margin: 15px 0;
+}
+
+td {
+  background-color: white;
+  padding: 7px;
+  text-align: left;
+  vertical-align: middle;
+  font-weight: 400;
+  font-size: 1.2em;
+  color: rgb(92, 10, 62);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Typography */
+
+a:link {
+  text-decoration: none;
+}
+
+a > h4:hover {
+  color: white;
+}
+
+h1,
+h2,
+h3 {
+  /* headline */
+  font-weight: 400;
+  line-height: 0.25;
+  font-style: italic;
+  color: rgb(47, 5, 31);
+  text-align: center;
+}
+
+h4 {
+  /* subhead */
+  letter-spacing: 0.05em;
+  font-weight: 400;
+  font-style: italic;
+  color: rgb(47, 5, 31);
+  text-align: center;
+}
+
+h5 {
+  /* subhead - list parameters*/
+  margin: 5px;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+}
+
+/* Font Awesome Icons */
+.fa-edit {
+  font-size: 1.5em;
+  color: rgb(192, 71, 146);
+}
+
+.fa-trash {
+  font-size: 1.5em;
+  color: rgb(192, 71, 146);
+}
+

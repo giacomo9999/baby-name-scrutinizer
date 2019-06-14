@@ -18,38 +18,32 @@ class List extends React.Component {
       </tr>
     ));
     return (
-      <div className="ui centered card">
-        <div className="content">
-          <div className="center aligned">
-            <h4>{" - List " + this.props.list_id + " Parameters -"}</h4>
-            <div className="ui pink label">
-              <h5 className="white">{this.props.year}</h5>
+      <div className="global_wrapper_bordered">
+        <div className="list_header">
+          <h4>{" - List " + this.props.list_id + " Parameters -"}</h4>
+          <div className="global_wrapper_flex">
+            <div className="label_param_box">
+              <h5>{this.props.year}</h5>
             </div>
-            <div className="ui pink label">
-              <h5 className="white">{this.props.sex}</h5>
+            <div className="label_param_box">
+              <h5>{this.props.sex}</h5>
             </div>
-            <div className="ui pink label">
-              <h5 className="white">{this.props.race}</h5>
+            <div className="label_param_box">
+              <h5>{this.props.race}</h5>
             </div>
-            <table className="ui celled definition striped table">
-              <tbody className="two wide column">{nameList}</tbody>
-            </table>
           </div>
         </div>
 
-        <div className="extra content">
-          <span
-            className="right floated edit icon"
-            onClick={this.props.onEditClick}
-          >
-            <i className="edit icon" />
-          </span>
-          <span
-            className="right floated trash icon"
-            onClick={this.handleTrashClick}
-          >
-            <i className="trash icon" />
-          </span>
+        <div className="global_wrapper_flex">
+          <table className="result_table">
+            <tbody>{nameList}</tbody>
+          </table>
+        </div>
+
+        <div className="global_wrapper_grid" >
+          <div ></div>
+          <i class="fas fa-edit" onClick={this.props.onEditClick} />
+          <i class="fas fa-trash" onClick={this.handleTrashClick} />
         </div>
       </div>
     );
