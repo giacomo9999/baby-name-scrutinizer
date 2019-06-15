@@ -22,13 +22,13 @@ class List extends React.Component {
         <div className="list_header">
           <h4>{" - List " + this.props.list_id + " Parameters -"}</h4>
           <div className="global_wrapper_flex">
-            <div className="label_param_box">
+            <div className="list_label_param_box">
               <h5>{this.props.year}</h5>
             </div>
-            <div className="label_param_box">
+            <div className="list_label_param_box">
               <h5>{this.props.sex}</h5>
             </div>
-            <div className="label_param_box">
+            <div className="list_label_param_box">
               <h5>{this.props.race}</h5>
             </div>
           </div>
@@ -42,8 +42,8 @@ class List extends React.Component {
 
         <div className="global_wrapper_grid" >
           <div ></div>
-          <i class="fas fa-edit" onClick={this.props.onEditClick} />
-          <i class="fas fa-trash" onClick={this.handleTrashClick} />
+          <i className="fas fa-edit" onClick={this.props.onEditClick} />
+          <i className="fas fa-trash" onClick={this.handleTrashClick} />
         </div>
       </div>
     );

@@ -18,7 +18,7 @@ class EditableListList extends React.Component {
           onTrashClick={this.props.onTrashClick}
         />
       ));
-      return <div className="editable_list_lists">{lists}</div>;
+      return <div className="editable_list_list_lists">{lists}</div>;
     }
   }
 
