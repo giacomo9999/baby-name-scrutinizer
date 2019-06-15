@@ -65,13 +65,26 @@ class ListDashboard extends React.Component {
           record.race.toUpperCase() === adjRaceObj[entry.race]
       );
 
+      console.log("Filtered Names Data: ", filteredNamesData);
+
       if (filteredNamesData.length === 0) {
         console.log("cannot match request parameters to DB.");
         return ["one or more arguments not in DB"];
       }
       const topFive = [];
-      for (let i = 0; i <= 4; i++) {
-        topFive.push(filteredNamesData[i].name.toUpperCase());
+      // for (let i = 0; i <= 4; i++) {
+      //   topFive.push(filteredNamesData[i].name.toUpperCase());
+      // }
+
+      let i = 0;
+      let increment = 1;
+
+      while (increment <= 5) {
+        if (parseInt(filteredNamesData[i].nameRank) === increment) {
+          topFive.push(filteredNamesData[i].name.toUpperCase());
+          increment += 1;
+        }
+        i += 1;
       }
       console.log(`Top Five Names: ${topFive}`);
       return topFive;
