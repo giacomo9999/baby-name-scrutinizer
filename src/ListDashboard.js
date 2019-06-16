@@ -65,7 +65,7 @@ class ListDashboard extends React.Component {
           record.race.toUpperCase() === adjRaceObj[entry.race]
       );
 
-      console.log("Filtered Names Data: ", filteredNamesData);
+      // console.log("Filtered Names Data: ", filteredNamesData);
 
       if (filteredNamesData.length === 0) {
         console.log("cannot match request parameters to DB.");

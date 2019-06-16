@@ -10,15 +10,7 @@ class App extends Component {
       "https://data.cityofnewyork.us/api/views/25th-nujf/rows.json?accessType=DOWNLOAD"
     )
       .then(response => response.json())
-      // .then(function(myJson) {
-      //   console.log("DATA....."+myJson.data);
-      // })
-
-      // axios
-      //   .get(
-      //     `${"https://cors-anywhere.herokuapp.com/"}https://data.cityofnewyork.us/api/views/25th-nujf/rows.json?accessType=DOWNLOAD`
-      //   )
-
+     
       // Old GET Request:
       // axios
       //   .get(
@@ -28,7 +20,7 @@ class App extends Component {
       // extract relevant data from response object
       .then(response => {
         console.log(
-          "Data retrieved from cityofnewyork.us. Building database..."+response.data
+          "Data retrieved from cityofnewyork.us. Building database..."
         );
         const recordObj = response.data.map((entry, index) => ({
           key: "entry_" + index,
