@@ -8,8 +8,14 @@ class App extends Component {
   componentDidMount() {
     axios
       .get(
-        "https://data.cityofnewyork.us/api/views/25th-nujf/rows.json?accessType=DOWNLOAD"
+        `${"https://cors-anywhere.herokuapp.com/"}https://data.cityofnewyork.us/api/views/25th-nujf/rows.json?accessType=DOWNLOAD`
       )
+      // Old GET Request:
+      // axios
+      //   .get(
+      //     "https://data.cityofnewyork.us/api/views/25th-nujf/rows.json?accessType=DOWNLOAD"
+      //   )
+      
       // extract relevant data from response object
       .then(response => {
         console.log(
@@ -93,5 +99,3 @@ class App extends Component {
 }
 
 export default App;
-
-
