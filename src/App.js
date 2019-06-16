@@ -1,27 +1,36 @@
 import React, { Component } from "react";
 import ListDashboard from "./ListDashboard";
-import axios from "axios";
+// import axios from "axios";
 
 class App extends Component {
   state = { namesData: [] };
 
   componentDidMount() {
-    axios
-      .get(
-        `${"https://cors-anywhere.herokuapp.com/"}https://data.cityofnewyork.us/api/views/25th-nujf/rows.json?accessType=DOWNLOAD`
-      )
+    fetch(
+      "https://data.cityofnewyork.us/api/views/25th-nujf/rows.json?accessType=DOWNLOAD"
+    )
+      .then(response => response.json())
+      // .then(function(myJson) {
+      //   console.log("DATA....."+myJson.data);
+      // })
+
+      // axios
+      //   .get(
+      //     `${"https://cors-anywhere.herokuapp.com/"}https://data.cityofnewyork.us/api/views/25th-nujf/rows.json?accessType=DOWNLOAD`
+      //   )
+
       // Old GET Request:
       // axios
       //   .get(
       //     "https://data.cityofnewyork.us/api/views/25th-nujf/rows.json?accessType=DOWNLOAD"
       //   )
-      
+
       // extract relevant data from response object
       .then(response => {
         console.log(
-          "Data retrieved from cityofnewyork.us. Building database..."
+          "Data retrieved from cityofnewyork.us. Building database..."+response.data
         );
-        const recordObj = response.data.data.map((entry, index) => ({
+        const recordObj = response.data.map((entry, index) => ({
           key: "entry_" + index,
           birthYear: entry[8],
           sex: entry[9],
