@@ -1,3 +1,6 @@
+// Rendered by App.js
+// Renders EditableListList and ToggleableListForm
+
 import React from "react";
 import EditableListList from "./EditableListList";
 import ToggleableListForm from "./ToggleableListForm";

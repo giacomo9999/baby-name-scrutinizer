@@ -1,3 +1,5 @@
+// Rendered by EditableList
+
 import React from "react";
 
 class List extends React.Component {
@@ -40,8 +42,8 @@ class List extends React.Component {
           </table>
         </div>
 
-        <div className="global_wrapper_grid" >
-          <div ></div>
+        <div className="global_wrapper_grid">
+          <div />
           <i className="fas fa-edit" onClick={this.props.onEditClick} />
           <i className="fas fa-trash" onClick={this.handleTrashClick} />
         </div>

@@ -1,3 +1,6 @@
+// Rendered by EditableListList
+// Renders ListForm or List
+
 import React from "react";
 import ListForm from "./ListForm";
 import List from "./List";
