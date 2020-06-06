@@ -13,35 +13,35 @@ class ListDashboard extends React.Component {
         year: "2011",
         sex: "Female",
         race: "Asian/Pacific",
-        topFiveNames: ["SOPHIA", "CHLOE", "EMILY", "OLIVIA", "EMMA"]
-      }
-    ]
+        topFiveNames: ["SOPHIA", "CHLOE", "EMILY", "OLIVIA", "EMMA"],
+      },
+    ],
   };
 
-  handleCreateFormSubmit = list => {
+  handleCreateFormSubmit = (list) => {
     // console.log('ListDashboard now handling CreateFormSubmit.');
     this.createList(list);
   };
 
-  handleEditFormSubmit = attrs => {
+  handleEditFormSubmit = (attrs) => {
     console.log("ListDashboard now handling EditFormSubmit.");
     console.log(attrs);
     this.updateList(attrs);
     console.log(`List ${attrs.list_id} updated.`);
   };
 
-  handleTrashClick = listId => {
+  handleTrashClick = (listId) => {
     this.deleteList(listId);
   };
 
-  deleteList = listId => {
+  deleteList = (listId) => {
     console.log("ListDashboard now deleting list " + listId);
     this.setState({
-      lists: this.state.lists.filter(list => list.list_id !== listId)
+      lists: this.state.lists.filter((list) => list.list_id !== listId),
     });
   };
 
-  getResults = entry => {
+  getResults = (entry) => {
     if (this.props.namesData.length === 0) {
       console.log("data is not in yet.");
       return [];
@@ -51,7 +51,7 @@ class ListDashboard extends React.Component {
         Black: "BLACK NON HISPANIC",
         "Asian/Pacific": "ASIAN AND PACIFIC ISLANDER",
         White: "WHITE NON HISPANIC",
-        Hispanic: "HISPANIC"
+        Hispanic: "HISPANIC",
       };
 
       console.log(
@@ -62,7 +62,7 @@ class ListDashboard extends React.Component {
       );
 
       const filteredNamesData = this.props.namesData.filter(
-        record =>
+        (record) =>
           record.birthYear === entry.year &&
           record.sex.toUpperCase() === entry.sex.toUpperCase() &&
           record.race.toUpperCase() === adjRaceObj[entry.race]
@@ -77,9 +77,9 @@ class ListDashboard extends React.Component {
 
       const correctedTopFive = ["", "", "", "", ""];
       filteredNamesData
-        .filter(entry => entry.nameRank <= 5)
+        .filter((entry) => entry.nameRank <= 5)
         .forEach(
-          entry =>
+          (entry) =>
             (correctedTopFive[entry.nameRank - 1] = entry.name.toUpperCase())
         );
 
@@ -88,7 +88,7 @@ class ListDashboard extends React.Component {
     }
   };
 
-  createList = list => {
+  createList = (list) => {
     const nameArr = this.getResults(list);
     function newList(attrs = {}, listLength) {
       const list = {
@@ -96,25 +96,25 @@ class ListDashboard extends React.Component {
         year: attrs.year || "Year",
         sex: attrs.sex || "Sex",
         race: attrs.race || "Ethnicity",
-        topFiveNames: nameArr || []
+        topFiveNames: nameArr || [],
       };
       return list;
     }
     console.log("ListDashboard now creating list...");
     const l = newList(list, this.state.lists.length);
     this.setState({
-      lists: this.state.lists.concat(l)
+      lists: this.state.lists.concat(l),
     });
   };
 
-  updateList = attrs => {
+  updateList = (attrs) => {
     console.log("ListDashboard now updating state with list.");
     console.log(
       `New attrs: ${attrs.list_id}, ${attrs.year}, ${attrs.sex}, ${attrs.race}`
     );
     attrs.topFiveNames = this.getResults(attrs);
     this.setState({
-      lists: this.state.lists.map(list => {
+      lists: this.state.lists.map((list) => {
         console.log("Setting state with revised list...");
         if (list.list_id === attrs.list_id) {
           return Object.assign({}, list, {
@@ -122,19 +122,19 @@ class ListDashboard extends React.Component {
             year: attrs.year,
             sex: attrs.sex,
             race: attrs.race,
-            topFiveNames: attrs.topFiveNames
+            topFiveNames: attrs.topFiveNames,
           });
         } else {
           return list;
         }
-      })
+      }),
     });
   };
 
   render() {
     return (
       <div className="dashboard_container">
-        <div className="global_wrapper_bordered_header">
+        <div className="dashboard-header">
           <h3>The NYC </h3>
           <h1>Baby Name Scrutinizer</h1>
           <a href="https://opendata.cityofnewyork.us/">
@@ -142,7 +142,7 @@ class ListDashboard extends React.Component {
           </a>
         </div>
 
-        <div className="dashboard_all_lists_and forms">
+        <div>
           <EditableListList
             lists={this.state.lists}
             onFormSubmit={this.handleEditFormSubmit}
