@@ -148,6 +148,7 @@ class ListDashboard extends React.Component {
             onFormSubmit={this.handleEditFormSubmit}
             onTrashClick={this.handleTrashClick}
           />
+          <br />
           <ToggleableListForm onFormSubmit={this.handleCreateFormSubmit} />
         </div>
       </div>

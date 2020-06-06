@@ -32,8 +32,8 @@ class ToggleableListForm extends React.Component {
       );
     } else {
       return (
-        <div className="global_wrapper_flex">
-          <button className="button_basic" onClick={this.handleFormOpen}>
+        <div className="container_flex">
+          <button className="button" onClick={this.handleFormOpen}>
             Create New List
           </button>
         </div>

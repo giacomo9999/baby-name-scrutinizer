@@ -23,26 +23,26 @@ class List extends React.Component {
       <div className="container-inner">
         <div className="list_header">
           <h4>{" - List " + this.props.list_id + " Parameters -"}</h4>
-          <div className="global_wrapper_flex">
-            <div className="list_label_param_box">
+          <div className="container_flex">
+            <div className="list-parameter-tag-box">
               <h5>{this.props.year}</h5>
             </div>
-            <div className="list_label_param_box">
+            <div className="list-parameter-tag-box">
               <h5>{this.props.sex}</h5>
             </div>
-            <div className="list_label_param_box">
+            <div className="list-parameter-tag-box">
               <h5>{this.props.race}</h5>
             </div>
           </div>
         </div>
 
-        <div className="global_wrapper_flex">
-          <table className="result_table">
+        <div className="container_flex">
+          <table >
             <tbody>{nameList}</tbody>
           </table>
         </div>
 
-        <div className="global_wrapper_grid">
+        <div className="container_grid">
           <div />
           <i className="fas fa-edit" onClick={this.props.onEditClick} />
           <i className="fas fa-trash" onClick={this.handleTrashClick} />

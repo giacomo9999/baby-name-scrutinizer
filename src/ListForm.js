@@ -41,7 +41,7 @@ class ListForm extends React.Component {
     const submitText = this.props.list_id ? "Update" : "Create";
     return (
       <div className="container-inner">
-        <div className="global_wrapper_flex">
+        <div className="container_flex">
           <select
             className="dropdown"
             name="year"
@@ -81,11 +81,11 @@ class ListForm extends React.Component {
             <option value="Asian/Pacific">Asian/Pacific</option>
           </select>
         </div>
-        <div className="global_wrapper_flex">
-          <button className="button_basic" onClick={this.handleSubmit}>
+        <div className="container_flex">
+          <button className="button" onClick={this.handleSubmit}>
             {submitText}
           </button>
-          <button className="button_basic" onClick={this.props.onFormClose}>
+          <button className="button" onClick={this.props.onFormClose}>
             Cancel
           </button>
         </div>

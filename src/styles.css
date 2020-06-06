@@ -27,18 +27,18 @@ body {
   border-width: 3px;
 }
 
-.global_wrapper_flex {
+.container_flex {
   display: flex;
   justify-content: center;
 }
 
-.global_wrapper_grid {
+.container_grid {
   display: grid;
   grid-template-columns: 335px 1fr 1fr;
 }
 
 /* List */
-.list_label_param_box {
+.list-parameter-tag-box {
   font-size: 1em;
   display: inline-block;
   border-radius: 10px;
@@ -68,7 +68,7 @@ td {
 
 /* Buttons & Dropdowns*/
 
-.button_basic {
+.button {
   font-family: "Poppins", sans-serif;
   color: rgb(92, 10, 62);
   font-size: 1em;
