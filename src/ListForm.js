@@ -40,7 +40,7 @@ class ListForm extends React.Component {
   render() {
     const submitText = this.props.list_id ? "Update" : "Create";
     return (
-      <div className="global_wrapper_bordered">
+      <div className="container-inner">
         <div className="global_wrapper_flex">
           <select
             className="dropdown"

@@ -5,7 +5,7 @@ import React from "react";
 import EditableList from "./EditableList";
 
 // child of ListDashboard
-class EditableListList extends React.Component {
+class EditableListCatalog extends React.Component {
   render() {
     // console.log('EditableListList updating the lists.')
     const lists = this.props.lists.map((list) => (
@@ -24,4 +24,4 @@ class EditableListList extends React.Component {
   }
 }
 
-export default EditableListList;
+export default EditableListCatalog;

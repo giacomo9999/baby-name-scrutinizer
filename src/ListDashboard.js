@@ -2,7 +2,7 @@
 // Renders EditableListList and ToggleableListForm
 
 import React from "react";
-import EditableListList from "./EditableListList";
+import EditableListCatalog from "./EditableListCatalog";
 import ToggleableListForm from "./ToggleableListForm";
 
 class ListDashboard extends React.Component {
@@ -133,8 +133,8 @@ class ListDashboard extends React.Component {
 
   render() {
     return (
-      <div className="dashboard_container">
-        <div className="dashboard-header">
+      <div className="container-outer">
+        <div className="container-inner">
           <h3>The NYC </h3>
           <h1>Baby Name Scrutinizer</h1>
           <a href="https://opendata.cityofnewyork.us/">
@@ -143,7 +143,7 @@ class ListDashboard extends React.Component {
         </div>
 
         <div>
-          <EditableListList
+          <EditableListCatalog
             lists={this.state.lists}
             onFormSubmit={this.handleEditFormSubmit}
             onTrashClick={this.handleTrashClick}

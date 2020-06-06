@@ -9,32 +9,22 @@ body {
   background-color: rgb(242, 130, 200);
 }
 
-.global_wrapper_bordered {
-  border-style: solid;
-  border-width: 3px;
-  border-radius: 20px;
-  padding: 5px;
-  border-color: white;
-  background-color: rgb(247, 177, 220);
-  padding: 20px;
-  margin: 10px;
+.container-outer {
+  width: 25%;
+  padding: 10px;
+  margin: 20px auto 10px;
+  border-radius: 5px;
 }
 
-.dashboard-header {
-  border-style: solid;
-  border-width: 3px;
-  border-radius: 20px;
-  padding: 5px;
-  border-color: white;
+.container-inner {
+  width: 85%;
+  margin: 10px auto 5px;
   background-color: rgb(247, 177, 220);
   padding: 10px;
-  margin: 10px;
-}
-
-.global_wrapper_bordered > h4,
-.list_header > h4 {
-  margin: 0;
-  line-height: 2em;
+  border-radius: 20px;
+  border-color: white;
+  border-style: solid;
+  border-width: 3px;
 }
 
 .global_wrapper_flex {
@@ -47,19 +37,6 @@ body {
   grid-template-columns: 335px 1fr 1fr;
 }
 
-/* ListDashboard */
-
-.dashboard_container {
-  width: 475px;
-  margin: 20px auto;
-}
-
-/* EditableListList */
-
-.editable_list_list_lists {
-  background-color: rgb(242, 130, 200);
-}
-
 /* List */
 .list_label_param_box {
   font-size: 1em;
@@ -70,8 +47,6 @@ body {
   height: 30px;
   background-color: rgb(192, 71, 146);
 }
-
-/* ListForm */
 
 /* Tables and Table Items */
 
@@ -182,6 +157,7 @@ h4 {
   font-style: italic;
   color: rgb(47, 5, 31);
   text-align: center;
+  margin: 10px;
 }
 
 h5 {

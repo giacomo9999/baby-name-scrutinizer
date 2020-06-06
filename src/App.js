@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import ListDashboard from "./ListDashboard";
-// import axios from "axios";
 
 class App extends Component {
   state = { namesData: [] };
@@ -10,14 +9,6 @@ class App extends Component {
       "https://data.cityofnewyork.us/api/views/25th-nujf/rows.json?accessType=DOWNLOAD"
     )
       .then(response => response.json())
-     
-      // Old GET Request:
-      // axios
-      //   .get(
-      //     "https://data.cityofnewyork.us/api/views/25th-nujf/rows.json?accessType=DOWNLOAD"
-      //   )
-
-      // extract relevant data from response object
       .then(response => {
         console.log(
           "Data retrieved from cityofnewyork.us. Building database..."

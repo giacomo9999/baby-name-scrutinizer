@@ -20,7 +20,7 @@ class List extends React.Component {
       </tr>
     ));
     return (
-      <div className="global_wrapper_bordered">
+      <div className="container-inner">
         <div className="list_header">
           <h4>{" - List " + this.props.list_id + " Parameters -"}</h4>
           <div className="global_wrapper_flex">
