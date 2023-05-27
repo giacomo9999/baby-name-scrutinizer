@@ -7,10 +7,10 @@ class ListForm extends React.Component {
     list_id: this.props.list_id || "",
     year: this.props.year || "",
     sex: this.props.sex || "",
-    race: this.props.race || ""
+    race: this.props.race || "",
   };
 
-  handleChange = e => {
+  handleChange = (e) => {
     // console.log('ListForm Changing ' + e.target.name)
     this.setState({ [e.target.name]: e.target.value });
   };
@@ -30,7 +30,7 @@ class ListForm extends React.Component {
         list_id: this.props.list_id,
         year: this.state.year,
         sex: this.state.sex,
-        race: this.state.race
+        race: this.state.race,
       });
     } else {
       alert("Year, Sex and Ethnicity must *all* be assigned values.");
